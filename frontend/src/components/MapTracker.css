@@ -1,0 +1,71 @@
+.map-tracker {
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.map-instructions {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: white;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.map-instruction-icon {
+  font-size: 1.2rem;
+}
+
+.map-container {
+  height: 350px;
+  width: 100%;
+}
+
+.leaflet-map {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.map-legend {
+  display: flex;
+  gap: 24px;
+  padding: 12px 20px;
+  background: var(--bg-cream);
+  border-top: 1px solid #f0f0f0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.shop-dot {
+  background: #dc3545;
+}
+
+.delivery-dot {
+  background: #28a745;
+}
+
+@media (max-width: 480px) {
+  .map-container {
+    height: 250px;
+  }
+}
+

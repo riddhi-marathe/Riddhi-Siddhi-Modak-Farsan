@@ -1,0 +1,355 @@
+/* Welcome Page Styles */
+.welcome-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #4A0012;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Video Background */
+.welcome-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Dark Overlay */
+.welcome-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Content Container */
+.welcome-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 0 16px;
+}
+
+/* Brand Title */
+.welcome-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #FAFAF7;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Tagline */
+.welcome-tagline {
+  font-size: 1.5rem;
+  color: #F9A826;
+  font-weight: 600;
+  margin-bottom: 32px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Order Button */
+.welcome-btn {
+  padding: 14px 40px;
+  background: #F9A826;
+  color: #4A0012;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(249, 168, 38, 0.4);
+  font-family: 'Poppins', sans-serif;
+}
+
+.welcome-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 30px rgba(249, 168, 38, 0.6);
+}
+
+/* Progress Bar */
+.welcome-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #F9A826, #D4A017);
+  z-index: 3;
+  transition: width 0.1s linear;
+}
+
+/* Skip Button */
+.welcome-skip-btn {
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  z-index: 20;
+  padding: 10px 28px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  font-family: 'Poppins', sans-serif;
+}
+
+.welcome-skip-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+/* Brand Name at Bottom */
+.welcome-brand {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+  color: white;
+  opacity: 0.7;
+}
+
+.welcome-brand p {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .welcome-title {
+    font-size: 2.2rem;
+  }
+
+  .welcome-tagline {
+    font-size: 1.2rem;
+  }
+
+  .welcome-skip-btn {
+    bottom: 30px;
+    right: 20px;
+    padding: 8px 20px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Scrollbar Hide */
+.welcome-page::-webkit-scrollbar {
+  display: none;
+}
+
+/* Fade-in Animation for content after video starts */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Light brand direction */
+.welcome-page {
+  background: #f7f1e8;
+  color: #35251f;
+}
+
+.welcome-video-bg {
+  width: min(58vw, 820px);
+  height: min(78vh, 720px);
+  top: 50%;
+  left: auto;
+  right: 7vw;
+  transform: translateY(-50%);
+  border-radius: 28px;
+  box-shadow: 0 28px 80px rgba(94, 48, 25, 0.22);
+  z-index: 1;
+}
+
+.welcome-overlay {
+  background: linear-gradient(90deg, #f7f1e8 0%, rgba(247, 241, 232, 0.95) 37%, rgba(247, 241, 232, 0.18) 75%, rgba(247, 241, 232, 0.03) 100%);
+  z-index: 2;
+}
+
+.welcome-page::before,
+.welcome-page::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.welcome-page::before {
+  width: 420px;
+  height: 420px;
+  left: -180px;
+  bottom: -180px;
+  background: rgba(221, 116, 44, 0.12);
+}
+
+.welcome-page::after {
+  width: 180px;
+  height: 180px;
+  right: 45%;
+  top: -70px;
+  border: 1px solid rgba(173, 76, 39, 0.18);
+}
+
+.welcome-content {
+  width: min(1180px, 100%);
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  padding: 40px 8vw;
+  z-index: 3;
+}
+
+.welcome-logo-wrap {
+  width: 148px;
+  height: 148px;
+  padding: 8px;
+  background: #fffdf8;
+  border: 1px solid rgba(173, 76, 39, 0.2);
+  border-radius: 22px;
+  box-shadow: 0 16px 32px rgba(94, 48, 25, 0.12);
+  margin-bottom: 26px;
+}
+
+.welcome-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.welcome-title {
+  max-width: 590px;
+  color: #54241d;
+  font-size: clamp(2.8rem, 6vw, 5.7rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  text-shadow: none;
+  margin-bottom: 20px;
+}
+
+.welcome-tagline {
+  color: #b26b25;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  text-shadow: none;
+  margin-bottom: 30px;
+}
+
+.welcome-btn {
+  border-radius: 9px;
+  padding: 15px 24px;
+  background: #a6422b;
+  color: #fffaf3;
+  box-shadow: 0 12px 24px rgba(166, 66, 43, 0.2);
+}
+
+.welcome-btn:hover {
+  background: #7f3023;
+  box-shadow: 0 16px 30px rgba(166, 66, 43, 0.28);
+}
+
+.welcome-progress {
+  bottom: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #d68129, #a6422b);
+  z-index: 5;
+}
+
+.welcome-skip-btn {
+  bottom: 34px;
+  right: 8vw;
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.76);
+  color: #54241d;
+  border-color: rgba(166, 66, 43, 0.25);
+  box-shadow: 0 8px 20px rgba(94, 48, 25, 0.08);
+  z-index: 6;
+}
+
+.welcome-brand {
+  left: 8vw;
+  bottom: 34px;
+  transform: none;
+  color: #54241d;
+  z-index: 6;
+}
+
+.welcome-brand p {
+  color: rgba(84, 36, 29, 0.58);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.welcome-logo-small {
+  width: 124px;
+  height: 124px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 800px) {
+  .welcome-video-bg {
+    width: 86vw;
+    height: 46vh;
+    top: 12vh;
+    right: 7vw;
+    transform: none;
+    opacity: 0.45;
+  }
+
+  .welcome-overlay {
+    background: linear-gradient(180deg, rgba(247, 241, 232, 0.6), #f7f1e8 67%);
+  }
+
+  .welcome-content {
+    align-items: center;
+    text-align: center;
+    padding: 28px 24px;
+  }
+
+  .welcome-title {
+    font-size: clamp(2.7rem, 12vw, 4.4rem);
+  }
+
+  .welcome-brand {
+    left: 24px;
+    bottom: 22px;
+  }
+
+  .welcome-skip-btn {
+    right: 24px;
+    bottom: 18px;
+  }
+}
+

@@ -1,0 +1,9 @@
+# Exclude dependencies and virtual environments
+node_modules/
+venv/
+env/
+__pycache__/
+
+# Exclude secrets and logs
+.env
+*.log
