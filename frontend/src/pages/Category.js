@@ -6,7 +6,7 @@ import ProductCard from '../components/ProductCard';
 import './Category.css';
 
 const categoryMeta = {
-  "Dry Snacks": { icon: '🥨', color: '#FF9933', bgGradient: 'linear-gradient(135deg, #FFF5E6, #FFE8CC)', video: 'https://cdn.coverr.co/videos/coverr-making-sweets-5645/1080p.mp4' },
+  "Dry Snacks": { icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKNGn8Ok8eG8igVH8_Dd68xUAfHO2586zAiwLBUF7aug&s=10', color: '#FF9933', bgGradient: 'linear-gradient(135deg, #FFF5E6, #FFE8CC)', video: 'https://cdn.coverr.co/videos/coverr-making-sweets-5645/1080p.mp4' },
   "Namkeen": { icon: '🥟', color: '#E67300', bgGradient: 'linear-gradient(135deg, #FFF0E6, #FFE0CC)', video: 'https://cdn.coverr.co/videos/coverr-making-sweets-5645/1080p.mp4' },
   "Sweets": { icon: '🍬', color: '#D4A017', bgGradient: 'linear-gradient(135deg, #FFF8E7, #FFEECC)', video: 'https://cdn.coverr.co/videos/coverr-making-sweets-5645/1080p.mp4' },
   "Wet Sweets": { icon: '🍮', color: '#800020', bgGradient: 'linear-gradient(135deg, #FFF0F0, #FFE4E1)', video: 'https://cdn.coverr.co/videos/coverr-making-sweets-5645/1080p.mp4' }
@@ -21,6 +21,27 @@ function Category({ addToCart }) {
   const videoRef = useRef(null);
 
   const meta = categoryMeta[category] || { icon: '🛍️', color: '#800020', bgGradient: 'linear-gradient(135deg, #FFF5E6, #FFE8CC)' };
+  const renderCategoryIcon = (className = '', altText = category || 'Category') => {
+    if (typeof meta.icon === 'string' && meta.icon.startsWith('http')) {
+      return (
+        <img
+          src={meta.icon}
+          alt={altText}
+          className={className}
+          style={{
+            width: className.includes('text-7xl') ? '120px' : '64px',
+            height: className.includes('text-7xl') ? '120px' : '64px',
+            objectFit: 'cover',
+            borderRadius: '18px',
+            boxShadow: '0 10px 25px rgba(0,0,0,0.12)',
+            display: 'block'
+          }}
+        />
+      );
+    }
+
+    return <span className={className}>{meta.icon}</span>;
+  };
 
   useEffect(() => {
     setProducts(menuData.filter(p => p.category === category));
@@ -61,7 +82,9 @@ function Category({ addToCart }) {
         </video>
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in-up">
-          <span className="text-7xl mb-6 block animate-float" style={{ filter: `drop-shadow(0 4px 12px ${meta.color}40)` }}>{meta.icon}</span>
+          <div className="mb-6 animate-float" style={{ filter: `drop-shadow(0 4px 12px ${meta.color}40)` }}>
+            {renderCategoryIcon('text-7xl block', category || 'Category')}
+          </div>
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4 animate-scale-in" style={{ color: meta.color, textShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
             {category}
           </h1>
@@ -98,7 +121,15 @@ function Category({ addToCart }) {
               {lottieData ? (
                 <Lottie animationData={lottieData} loop autoplay style={{ width: '100%', height: '100%' }} />
               ) : (
-                <span className="text-4xl flex h-full items-center justify-center">{meta.icon}</span>
+                typeof meta.icon === 'string' && meta.icon.startsWith('http') ? (
+                  <img
+                    src={meta.icon}
+                    alt={category || 'Category'}
+                    className="w-full h-full rounded-2xl object-cover shadow-md"
+                  />
+                ) : (
+                  <span className="text-4xl flex h-full items-center justify-center">{meta.icon}</span>
+                )
               )}
             </div>
             <div className="text-center md:text-left">

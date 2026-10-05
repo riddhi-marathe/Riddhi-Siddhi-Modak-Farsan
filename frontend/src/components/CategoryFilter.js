@@ -48,7 +48,15 @@ function CategoryFilter({ activeCategory, onCategoryChange }) {
           whileTap={{ scale: 0.95 }}
         >
           <span className="flex items-center gap-2 whitespace-nowrap">
-            <span>{cat.icon}</span>
+            {typeof cat.icon === 'string' && cat.icon.startsWith('http') ? (
+              <img
+                src={cat.icon}
+                alt={cat.label}
+                style={{ width: 20, height: 20, objectFit: 'cover', borderRadius: 6 }}
+              />
+            ) : (
+              <span>{cat.icon}</span>
+            )}
             {cat.label}
           </span>
         </motion.button>
