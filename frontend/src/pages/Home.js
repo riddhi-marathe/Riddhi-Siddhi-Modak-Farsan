@@ -116,11 +116,11 @@ function Home({ addToCart }) {
         </div>
 
         {/* Decorative Top Border */}
-        <div className="absolute top-0 left-0 right-0 h-2" style={{ background: 'linear-gradient(90deg, #F9A826, #D4A017, #2A9D8F)' }}></div>
+        <div className="absolute top-0 left-0 right-0 h-2" style={{ background: 'linear-gradient(90deg, #F3C76B, #E9B94C, #F9E3A5)' }}></div>
 
         <div className="relative z-10 text-center text-white px-6 max-w-5xl mx-auto" style={{ transform: `translateY(${scrollY * 0.05}px)` }}>
           <div className="inline-block px-6 py-2 rounded-full text-sm font-medium mb-6 border-2 animate-glow-pulse"
-            style={{ background: 'rgba(255,255,255,0.1)', borderColor: '#F9A826', color: '#FFC145' }}>
+            style={{ background: 'rgba(255,255,255,0.1)', borderColor: '#F3C76B', color: '#F9E3A5' }}>
             🏆 Authentic Maharashtrian Taste Since Years
           </div>
           
@@ -130,7 +130,7 @@ function Home({ addToCart }) {
             <span className="gradient-text-saffron" style={{ textShadow: '0 2px 10px rgba(212,160,23,0.5)' }}>Modak Farsan</span>
           </h1>
           
-          <p className="text-2xl md:text-3xl font-semibold mb-4" style={{ color: '#F9A826' }}>
+          <p className="text-2xl md:text-3xl font-semibold mb-4" style={{ color: '#F9E3A5' }}>
             ✨ Shuddh Swad, Hamari Pehchaan ✨
           </p>
           
@@ -141,7 +141,7 @@ function Home({ addToCart }) {
 
           <div className="flex flex-wrap gap-4 justify-center mb-12">
             <a href="#catalog" className="px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-110 hover:shadow-2xl ripple-effect"
-              style={{ background: '#F9A826', color: '#2D2323' }}>
+              style={{ background: '#F3C76B', color: '#2D2323' }}>
               🥨 Explore Our Menu
             </a>
             <Link to="/checkout" className="px-8 py-4 rounded-full font-bold text-lg border-2 transition-all duration-300 transform hover:scale-110 hover:shadow-2xl"
@@ -153,9 +153,9 @@ function Home({ addToCart }) {
           {/* Stats with animated counters */}
           <div ref={statsRef} className="flex justify-center gap-8 md:gap-16">
             {[
-              { num: animateCounts ? counts.products : 0, suffix: '+', label: 'Traditional Products', color: '#FFC145' },
+              { num: animateCounts ? counts.products : 0, suffix: '+', label: 'Traditional Products', color: '#F9E3A5' },
               { num: animateCounts ? counts.radius : 0, suffix: 'km', label: 'Delivery Radius', color: '#2A9D8F' },
-              { num: '🚚', label: 'Free Delivery*', color: '#F9A826', isIcon: true }
+              { num: '🚚', label: 'Free Delivery*', color: '#F3C76B', isIcon: true }
             ].map((s, i) => (
               <div key={i} className="text-center animate-fade-in-up" style={{ animationDelay: `${i * 0.2}s` }}>
                 {s.isIcon ? (
@@ -172,18 +172,18 @@ function Home({ addToCart }) {
         </div>
 
         {/* Decorative Bottom Border */}
-        <div className="absolute bottom-0 left-0 right-0 h-2" style={{ background: 'linear-gradient(90deg, #2A9D8F, #D4A017, #F9A826)' }}></div>
+        <div className="absolute bottom-0 left-0 right-0 h-2" style={{ background: 'linear-gradient(90deg, #2A9D8F, #E9B94C, #F3C76B)' }}></div>
         
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 rounded-full flex justify-center border-2" style={{ borderColor: 'rgba(255,255,255,0.3)' }}>
-            <div className="w-1.5 h-3 rounded-full mt-2 animate-pulse" style={{ background: '#F9A826' }}></div>
+            <div className="w-1.5 h-3 rounded-full mt-2 animate-pulse" style={{ background: '#F3C76B' }}></div>
           </div>
         </div>
       </section>
 
       {/* ====== LOTTIE DELIVERY ANIMATION SECTION ====== */}
-      <section className="py-12" style={{ background: 'linear-gradient(90deg, #FFC145, #F0C040, #FFC145)' }}>
+      <section className="py-12" style={{ background: 'linear-gradient(90deg, #F9E3A5, #FCE8B2, #F9E3A5)' }}>
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 bg-white/80 backdrop-blur rounded-2xl p-8 shadow-xl card-glow">
             <div className="w-28 h-28 flex-shrink-0">
@@ -198,7 +198,7 @@ function Home({ addToCart }) {
               <p className="text-gray-600">Freshly prepared snacks delivered to your doorstep within 1-3 km radius</p>
               <div className="flex flex-wrap gap-3 mt-4">
                 <span className="px-4 py-1.5 rounded-full text-sm font-medium" style={{ background: '#2A9D8F', color: 'white' }}>✓ Next-day delivery</span>
-                <span className="px-4 py-1.5 rounded-full text-sm font-medium" style={{ background: '#F9A826', color: '#2D2323' }}>✓ COD & UPI</span>
+                <span className="px-4 py-1.5 rounded-full text-sm font-medium" style={{ background: '#F3C76B', color: '#2D2323' }}>✓ COD & UPI</span>
                 <span className="px-4 py-1.5 rounded-full text-sm font-medium" style={{ background: '#800020', color: 'white' }}>✓ Fresh Guarantee</span>
               </div>
             </div>
@@ -216,7 +216,7 @@ function Home({ addToCart }) {
               Browse our wide range of traditional Maharashtrian delicacies, 
               all made with love and the finest ingredients
             </p>
-            <div className="w-24 h-1 mx-auto mt-4 rounded-full" style={{ background: 'linear-gradient(90deg, #F9A826, #D4A017, #F9A826)' }}></div>
+            <div className="w-24 h-1 mx-auto mt-4 rounded-full" style={{ background: 'linear-gradient(90deg, #F3C76B, #E9B94C, #F3C76B)' }}></div>
           </div>
 
           {/* Category Filters */}
@@ -239,11 +239,11 @@ function Home({ addToCart }) {
 
       {/* ====== WHY CHOOSE US ====== */}
       <section className="py-20 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #4A0012 0%, #800020 50%, #2D2323 100%)' }}>
-        <div className="absolute top-0 left-0 right-0 h-2" style={{ background: 'linear-gradient(90deg, #D4A017, #F9A826, #D4A017)' }}></div>
-        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle at 25% 25%, #F9A826 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
+        <div className="absolute top-0 left-0 right-0 h-2" style={{ background: 'linear-gradient(90deg, #E9B94C, #F3C76B, #E9B94C)' }}></div>
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle at 25% 25%, #F3C76B 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-4" style={{ color: '#FFC145' }}>Why Choose Us?</h2>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-4" style={{ color: '#F9E3A5' }}>Why Choose Us?</h2>
           <p className="text-center text-white/70 text-lg mb-16 max-w-2xl mx-auto">
             We prioritize quality, taste, and your satisfaction above everything else
           </p>
@@ -264,13 +264,13 @@ function Home({ addToCart }) {
                   animationDelay: `${i * 0.15}s`
                 }}>
                 <div className="text-5xl mb-6 transition-all duration-500 hover:scale-110" style={{ filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))' }}>{item.icon}</div>
-                <h3 className="text-xl font-bold mb-3 font-serif" style={{ color: '#FFC145' }}>{item.title}</h3>
+                <h3 className="text-xl font-bold mb-3 font-serif" style={{ color: '#F9E3A5' }}>{item.title}</h3>
                 <p className="text-white/70 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-2" style={{ background: 'linear-gradient(90deg, #D4A017, #F9A826, #D4A017)' }}></div>
+        <div className="absolute bottom-0 left-0 right-0 h-2" style={{ background: 'linear-gradient(90deg, #E9B94C, #F3C76B, #E9B94C)' }}></div>
       </section>
 
       {/* ====== CONTACT SECTION ====== */}
@@ -298,8 +298,8 @@ function Home({ addToCart }) {
                 <div>
                   <h4 className="font-bold mb-1" style={{ color: '#800020' }}>Call Us</h4>
                   <p className="text-sm" style={{ color: '#8B7D6B' }}>
-                    <a href="tel:7974613110" style={{ color: '#F9A826', fontWeight: 600 }}>7974613110</a> / {' '}
-                    <a href="tel:9893378872" style={{ color: '#F9A826', fontWeight: 600 }}>9893378872</a>
+                    <a href="tel:7974613110" style={{ color: '#D9A93B', fontWeight: 600 }}>7974613110</a> / {' '}
+                    <a href="tel:9893378872" style={{ color: '#D9A93B', fontWeight: 600 }}>9893378872</a>
                   </p>
                 </div>
               </div>
@@ -315,7 +315,7 @@ function Home({ addToCart }) {
             <div className="text-center">
               <Link to="/checkout" 
                 className="inline-flex items-center gap-2 px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-110 hover:shadow-2xl ripple-effect"
-                style={{ background: '#F9A826', color: '#2D2323' }}>
+                style={{ background: '#F3C76B', color: '#2D2323' }}>
                 🛵 Order Now for Delivery
               </Link>
             </div>

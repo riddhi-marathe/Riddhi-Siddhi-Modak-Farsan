@@ -47,13 +47,13 @@
 .step.completed {
   background: var(--primary, #800020);
   color: white;
-  border-color: var(--secondary, #D4A017);
+  border-color: var(--secondary, #F3C76B);
 }
 
 .step.active {
   transform: scale(1.15);
   box-shadow: 0 0 20px rgba(128, 0, 32, 0.3);
-  border-color: var(--secondary, #D4A017);
+  border-color: var(--secondary, #F3C76B);
   animation: pulseStep 1.5s ease-in-out infinite;
 }
 
@@ -410,8 +410,8 @@
 
 .order-item-weight {
   font-size: 0.75rem;
-  color: var(--saffron, #F9A826);
-  background: #fff8e7;
+  color: var(--saffron, #D9A93B);
+  background: #fff7dd;
   padding: 1px 8px;
   border-radius: 10px;
   font-weight: 600;
@@ -548,6 +548,26 @@
 .payment-option-content small {
   color: var(--text-light);
   font-size: 0.8rem;
+}
+
+.payment-qr-details {
+  margin-top: 14px;
+  padding: 16px;
+  border: 1px solid #e8e8e8;
+  border-radius: var(--radius-sm, 10px);
+  text-align: center;
+}
+
+.payment-qr-details img {
+  display: block;
+  width: min(100%, 240px);
+  height: auto;
+  margin: 0 auto 10px;
+}
+
+.payment-qr-details p {
+  color: var(--text-light);
+  font-size: 0.85rem;
 }
 
 /* ====== PLACE ORDER ====== */

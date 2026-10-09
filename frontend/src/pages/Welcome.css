@@ -61,7 +61,7 @@
 /* Tagline */
 .welcome-tagline {
   font-size: 1.5rem;
-  color: #F9A826;
+  color: #F3C76B;
   font-weight: 600;
   margin-bottom: 32px;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
@@ -70,21 +70,21 @@
 /* Order Button */
 .welcome-btn {
   padding: 14px 40px;
-  background: #F9A826;
-  color: #4A0012;
+  background: #F3C76B;
+  color: #2D2323;
   border: none;
   border-radius: 50px;
   font-size: 1.1rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(249, 168, 38, 0.4);
+  box-shadow: 0 4px 20px rgba(243, 199, 107, 0.4);
   font-family: 'Poppins', sans-serif;
 }
 
 .welcome-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 30px rgba(249, 168, 38, 0.6);
+  box-shadow: 0 6px 30px rgba(243, 199, 107, 0.6);
 }
 
 /* Progress Bar */
@@ -93,7 +93,7 @@
   bottom: 0;
   left: 0;
   height: 4px;
-  background: linear-gradient(90deg, #F9A826, #D4A017);
+  background: linear-gradient(90deg, #F3C76B, #E9B94C);
   z-index: 3;
   transition: width 0.1s linear;
 }

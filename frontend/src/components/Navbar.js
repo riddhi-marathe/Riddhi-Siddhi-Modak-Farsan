@@ -35,7 +35,7 @@ function Navbar({ cartCount, onCartClick, user, onLogout }) {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FAFAF7]/95 backdrop-blur-md border-b-4 shadow-xl transition-transform duration-300" 
       style={{ 
-        borderColor: '#F9A826',
+        borderColor: '#F3C76B',
         boxShadow: '0 4px 20px rgba(45,35,35,0.12)',
         transform: visible ? 'translateY(0)' : 'translateY(-100%)'
       }}>
@@ -45,7 +45,7 @@ function Navbar({ cartCount, onCartClick, user, onLogout }) {
             src="/assets/logo-image.jpeg" 
             alt="Riddhi Siddhi" 
             className="h-10 w-10 rounded-full object-cover border-2 shadow-md"
-            style={{ borderColor: '#F9A826' }}
+            style={{ borderColor: '#F3C76B' }}
             onError={(e) => { e.target.onerror = null; e.target.style.display = 'none'; }}
           />
           <div className="flex flex-col">
@@ -72,7 +72,7 @@ function Navbar({ cartCount, onCartClick, user, onLogout }) {
               }}
             />
             <button type="submit" className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-full transition-all hover:scale-110"
-              style={{ background: '#F9A826', color: 'white' }}>
+              style={{ background: '#F3C76B', color: '#2D2323' }}>
               🔍
             </button>
           </div>
@@ -85,7 +85,7 @@ function Navbar({ cartCount, onCartClick, user, onLogout }) {
         </button>
 
         <div className={`md:flex items-center gap-1 ${isMenuOpen ? 'flex flex-col absolute top-16 left-0 right-0 p-4 shadow-xl border-t-2 animate-slide-up' : 'hidden'}`}
-          style={{ background: '#FAFAF7', borderColor: '#F9A826' }}>
+          style={{ background: '#FAFAF7', borderColor: '#F3C76B' }}>
           {/* Mobile Search */}
           <form onSubmit={handleSearch} className="w-full md:hidden mb-2">
             <div className="relative">
@@ -98,7 +98,7 @@ function Navbar({ cartCount, onCartClick, user, onLogout }) {
                 style={{ borderColor: '#E8E0D8', background: '#FAFAF7', color: '#2D2323' }}
               />
               <button type="submit" className="absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded-full"
-                style={{ background: '#F9A826', color: 'white' }}>
+                style={{ background: '#F3C76B', color: '#2D2323' }}>
                 🔍
               </button>
             </div>
@@ -141,7 +141,7 @@ function Navbar({ cartCount, onCartClick, user, onLogout }) {
           <span className="text-xl">🛒</span>
           {cartCount > 0 && (
             <span className="absolute -top-0.5 -right-0.5 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-lg animate-bounce-in"
-              style={{ background: '#F9A826' }}>
+              style={{ background: '#F3C76B', color: '#2D2323' }}>
               {cartCount}
             </span>
           )}

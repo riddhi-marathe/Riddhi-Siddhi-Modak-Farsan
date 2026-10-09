@@ -108,7 +108,7 @@ function ProductCard({ product, onAddToCart }) {
 
       {/* Content */}
       <div className="p-4 relative">
-        <h3 className="text-lg font-bold mb-1 transition-colors" style={{ color: isHovered ? '#F9A826' : '#2D2323' }}>
+        <h3 className="text-lg font-bold mb-1 transition-colors" style={{ color: isHovered ? '#D9A93B' : '#2D2323' }}>
           {product.name}
           {isHovered && <motion.span initial={{ scale: 0 }} animate={{ scale: 1 }} className="inline-block ml-1">✨</motion.span>}
         </h3>
@@ -118,7 +118,7 @@ function ProductCard({ product, onAddToCart }) {
           <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: '#E8F5E9', color: '#2A9D8F' }}>
             ✅ FSSAI Approved
           </span>
-          <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: '#FFF8E7', color: '#F9A826' }}>
+          <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: '#FFF3D9', color: '#C89020' }}>
             Fresh Made
           </span>
         </div>
@@ -133,9 +133,9 @@ function ProductCard({ product, onAddToCart }) {
               whileTap={{ scale: 0.95 }}
               className={`flex-1 py-2 px-1 rounded-lg text-xs font-semibold transition-all duration-200`}
               style={{
-                background: selectedWeight === weight ? '#F9A826' : '#FAFAF7',
-                color: selectedWeight === weight ? 'white' : '#2D2323',
-                border: selectedWeight === weight ? '2px solid #F9A826' : '2px solid #E8E0D8',
+                background: selectedWeight === weight ? '#F3C76B' : '#FAFAF7',
+                color: selectedWeight === weight ? '#2D2323' : '#2D2323',
+                border: selectedWeight === weight ? '2px solid #F3C76B' : '2px solid #E8E0D8',
               }}
             >
               <div>{weightLabels[weight]}</div>
@@ -148,12 +148,12 @@ function ProductCard({ product, onAddToCart }) {
         <div className="flex items-center justify-between mb-3 rounded-lg px-3 py-2 border transition-all duration-300" 
           style={{ 
             background: '#FAFAF7',
-            borderColor: isHovered ? '#F9A826' : '#E8E0D8'
+            borderColor: isHovered ? '#F3C76B' : '#E8E0D8'
           }}>
           <span className="text-sm font-medium" style={{ color: '#2D2323' }}>{weightLabels[selectedWeight]}</span>
           <div className="flex items-center gap-2">
             <span className="text-xs line-through" style={{ color: '#B8B0A8' }}>₹{product.prices[selectedWeight] + Math.round(product.prices[selectedWeight] * 0.1)}</span>
-            <span className="text-xl font-bold" style={{ color: '#F9A826' }}>₹{product.prices[selectedWeight]}</span>
+            <span className="text-xl font-bold" style={{ color: '#D9A93B' }}>₹{product.prices[selectedWeight]}</span>
           </div>
         </div>
 
@@ -169,9 +169,9 @@ function ProductCard({ product, onAddToCart }) {
                 whileTap={{ scale: 0.97 }}
                 className="w-full py-3 rounded-xl font-bold text-sm transition-all duration-300 relative overflow-hidden ripple-effect"
                 style={{ 
-                  background: '#F9A826', 
-                  color: 'white',
-                  boxShadow: isHovered ? '0 4px 15px rgba(249,168,38,0.4)' : '0 4px 10px rgba(249,168,38,0.2)'
+                  background: '#F3C76B', 
+                  color: '#2D2323',
+                  boxShadow: isHovered ? '0 4px 15px rgba(243,199,107,0.4)' : '0 4px 10px rgba(243,199,107,0.2)'
                 }}
               >
                 <span className="flex items-center justify-center gap-2 relative z-10">
@@ -186,8 +186,8 @@ function ProductCard({ product, onAddToCart }) {
                   animate={{ scale: 1, opacity: 1 }}
                   className="flex items-center justify-between w-full py-2 px-1 rounded-xl transition-all duration-300"
                   style={{ 
-                    background: '#F9A826',
-                    boxShadow: '0 4px 15px rgba(249,168,38,0.3)'
+                    background: '#F3C76B',
+                    boxShadow: '0 4px 15px rgba(243,199,107,0.3)'
                   }}
                 >
                   <motion.button 

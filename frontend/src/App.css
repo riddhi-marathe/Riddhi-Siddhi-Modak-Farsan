@@ -4,36 +4,36 @@
 
 /* 🎨 Modern Food Delivery App Color Palette */
 :root {
-  --saffron-gold: #F9A826;
-  --almond-cream: #FAFAF7;
+  --saffron-gold: #F3C76B;
+  --almond-cream: #FFFDF7;
   --dark-cocoa: #2D2323;
   --mint-green: #2A9D8F;
-  --saffron: #F9A826;
-  --saffron-dark: #E89700;
-  --saffron-light: #FFC145;
+  --saffron: #F3C76B;
+  --saffron-dark: #D9A93B;
+  --saffron-light: #F9E3A5;
   --maroon: #800020;
   --maroon-dark: #4A0012;
   --maroon-light: #B3003B;
-  --gold: #D4A017;
-  --gold-light: #F0C040;
-  --gold-dark: #B8860B;
+  --gold: #E9B94C;
+  --gold-light: #FCE8B2;
+  --gold-dark: #C89020;
   --emerald: #138D75;
   --emerald-light: #1ABC9C;
-  --cream: #FAFAF7;
-  --cream-dark: #F5F0EB;
+  --cream: #FFFDF7;
+  --cream-dark: #F8F1DF;
   --chai: #8B7D6B;
-  --rose: #FFE4E1;
-  --border-light: #E8E0D8;
+  --rose: #FFF3D9;
+  --border-light: #F2E2B4;
   
   /* Additional variables used by components */
   --primary: #800020;
   --primary-light: #B3003B;
   --primary-dark: #4A0012;
-  --secondary: #D4A017;
+  --secondary: #F3C76B;
   --text-dark: #2D2323;
   --text-light: #8B7D6B;
   --bg-white: #FFFFFF;
-  --bg-cream: #FAFAF7;
+  --bg-cream: #FFFDF7;
   --radius: 16px;
   --radius-sm: 10px;
   --shadow: 0 4px 15px rgba(45,35,35,0.06);

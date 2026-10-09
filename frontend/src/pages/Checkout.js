@@ -500,7 +500,9 @@ function Checkout({ cartItems, cartTotal, user, token, onLogin, clearCart }) {
                   </div>
                   <div className="order-total-row">
                     <span>💳 Payment</span>
-                    <span className="payment-badge">{formData.payment_method === 'cod' ? 'COD' : 'UPI'}</span>
+                    <span className="payment-badge">
+                      {formData.payment_method === 'cod' ? 'COD' : formData.payment_method === 'qr' ? 'QR' : 'UPI'}
+                    </span>
                   </div>
                   <div className="order-total-row order-total-final">
                     <span>Total</span>
@@ -545,7 +547,29 @@ function Checkout({ cartItems, cartTotal, user, token, onLogin, clearCart }) {
                       </div>
                     </div>
                   </label>
+                  <label className={`payment-option ${formData.payment_method === 'qr' ? 'active' : ''}`}>
+                    <input
+                      type="radio"
+                      name="payment_method"
+                      value="qr"
+                      checked={formData.payment_method === 'qr'}
+                      onChange={handleInputChange}
+                    />
+                    <div className="payment-option-content">
+                      <span className="payment-icon">▦</span>
+                      <div>
+                        <strong>Pay by QR Code</strong>
+                        <small>Scan with any UPI app</small>
+                      </div>
+                    </div>
+                  </label>
                 </div>
+                {formData.payment_method === 'qr' && (
+                  <div className="payment-qr-details">
+                    <img src="/assets/payment-qr.jpeg" alt="Scan this QR code to pay using UPI" />
+                    <p>Scan this code with your UPI app to pay.</p>
+                  </div>
+                )}
               </div>
 
               {/* Place Order Button */}

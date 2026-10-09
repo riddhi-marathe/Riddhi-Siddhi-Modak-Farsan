@@ -4,7 +4,7 @@ const menuData = [
     id: 1, name: "Matri", category: "Dry Snacks", 
     prices: { "1KG": 250, "1/2KG": 130, "250GM": 65 },
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKNGn8Ok8eG8igVH8_Dd68xUAfHO2586zAiwLBUF7aug&s=10",
-    bgColor: "from-amber-100 to-orange-100",
+    bgColor: "from-orange-50 to-amber-50",
     emoji: ""
   },
   { 
@@ -18,7 +18,7 @@ const menuData = [
     id: 3, name: "Namkeen Para", category: "Dry Snacks", 
     prices: { "1KG": 250, "1/2KG": 130, "250GM": 65 },
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ06xF6MlxmHuUPt1LLMkm1Yr_UJQqfw1KMvr38R6e9BQj05dahQsFbsyw&s=10",
-    bgColor: "from-yellow-50 to-amber-50",
+    bgColor: "from-orange-50 to-amber-50",
     emoji: ""
   },
   { 
@@ -32,13 +32,13 @@ const menuData = [
     id: 5, name: "Dry Samosa", category: "Dry Snacks", 
     prices: { "1KG": 280, "1/2KG": 145, "250GM": 150 },
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4eI9RuxdGpGGfNwkuD_ZNjVGcqk7TGN4A4lAIQTSVqkF92_zO8S_GAs0&s=10",
-    bgColor: "from-amber-50 to-yellow-50",
+    bgColor: "from-orange-50 to-amber-50",
     emoji: ""
   },
   { 
     id: 6, name: "Murmura/Bhel", category: "Dry Snacks", 
     prices: { "1KG": 300, "1/2KG": 150, "250GM": 75 },
-    image: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=600&h=400&fit=crop&auto=format",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJy_Zo21Bq-Y2G6Pyfk0m5WadNKw6F6_Pi0bA7W0Ocsg&s=10",
     bgColor: "from-orange-50 to-amber-50",
     emoji: "🍿"
   },
@@ -46,7 +46,7 @@ const menuData = [
     id: 7, name: "Nagpuri Poha", category: "Dry Snacks", 
     prices: { "1KG": 320, "1/2KG": 165, "250GM": 85 },
     image: "https://pipingpotcurry.com/wp-content/uploads/2021/11/Pohe-chivda-recipe.jpg",
-    bgColor: "from-yellow-50 to-orange-50",
+    bgColor: "from-orange-50 to-amber-50",
     emoji: ""
   },
   // NAMKEEN
@@ -76,64 +76,64 @@ const menuData = [
     id: 11, name: "Mitha Para", category: "Sweets", 
     prices: { "1KG": 300, "1/2KG": 150, "250GM": 80 },
     image: "https://5.imimg.com/data5/MD/TG/DJ/SELLER-101546433/mitha-shakkarpara-175rs.jpeg",
-    bgColor: "from-yellow-100 to-amber-100",
+    bgColor: "from-orange-100 to-amber-100",
     emoji: ""
   },
   { 
     id: 12, name: "Mitha Para Ghee", category: "Sweets", 
     prices: { "1KG": 450, "1/2KG": 230, "250GM": 120 },
-    image: "https://5.imimg.com/data5/ANDROID/Default/2024/1/374441282/VH/YJ/EJ/100305124/product-jpeg-500x500.jpg",
-    bgColor: "from-amber-100 to-yellow-100",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq_LCNLZ9g9OKq_aO4ZR_EdMmijjW2OLz_8v7cWnCcJsK5H-044KMAIDw&s=10",
+    bgColor: "from-amber-100 to-orange-100",
     emoji: ""
   },
   { 
     id: 13, name: "Mitha Sugarkoted", category: "Sweets", 
     prices: { "1KG": 320, "1/2KG": 165, "250GM": 85 },
-    image: "https://m.media-amazon.com/images/I/41k6OPYm+jL._AC_UF894,1000_QL80_.jpg",
-    bgColor: "from-white to-yellow-50",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn-8n4Dg-CT3l3cAgiS4Qa2oaUBLCTejfHDIsfrYK2xDyeZK7d9lxrqkE&s=10",
+    bgColor: "from-white to-orange-50",
     emoji: ""
   },
   { 
     id: 14, name: "Mitha Goudkoted", category: "Sweets", 
     prices: { "1KG": 400, "1/2KG": 210, "250GM": 110 },
-    image: "https://m.media-amazon.com/images/I/618Coisc9gL._AC_UF894,1000_QL80_.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtsmafK3WhiMug_VcI1Nocgj-yoQeqc61IqBmflFZcA4ZA5qC5NmbYFBoy&s=10",
     bgColor: "from-amber-100 to-orange-100",
     emoji: ""
   },
-  // WET/FRESH SWEETS
+  // WET/FRESH SWEET
   { 
     id: 15, name: "Modak Mawa", category: "Wet Sweets", 
     prices: { "1KG": 550, "1/2KG": 280, "250GM": 140 },
-    image: "https://images.unsplash.com/photo-1606318801954-d46d46d3360a?w=600&h=400&fit=crop&auto=format",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-7sPZeEXPBLXR3deZWJAsO0GwifLomNCRbDLwTEIz7g&s=10",
     bgColor: "from-red-50 to-amber-50",
     emoji: "🔴"
   },
   { 
     id: 16, name: "Khoprapak (Naril Barfi)", category: "Wet Sweets", 
     prices: { "1KG": 520, "1/2KG": 265, "250GM": 130 },
-    image: "https://images.unsplash.com/photo-1635537173637-d0b1eddde3bb?w=600&h=400&fit=crop&auto=format",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRSeZ0Pe0FSx8kJjsbeKDFRoFriit2i_D2DFH9HRRNZQ&s=10",
     bgColor: "from-white to-amber-50",
     emoji: "🥥"
   },
   { 
     id: 17, name: "Gujiya Mawa Dryfruits", category: "Wet Sweets", 
     prices: { "1KG": 650, "1/2KG": 330, "250GM": 170 },
-    image: "https://images.unsplash.com/photo-1606318801954-d46d46d3360a?w=600&h=400&fit=crop&auto=format",
-    bgColor: "from-amber-100 to-yellow-100",
+    image: "https://shuddh-delicacies.com/cdn/shop/files/shuddh-dry-fruit-mawa-gujiya-1634784.jpg?v=1767728645&width=1445",
+    bgColor: "from-amber-100 to-orange-100",
     emoji: "🥟"
   },
   { 
     id: 18, name: "Laddu Besan", category: "Wet Sweets", 
     prices: { "1KG": 520, "1/2KG": 260, "250GM": 130 },
-    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&h=400&fit=crop&auto=format",
-    bgColor: "from-yellow-100 to-orange-100",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT93LAvFVuAhFhX7F0iShhHkeFaroMt1BadQqK7CnMRxsYgcEeNiMXWfvs&s=10",
+    bgColor: "from-orange-100 to-amber-100",
     emoji: "🟡"
   },
   { 
     id: 19, name: "Laddu Rava", category: "Wet Sweets", 
     prices: { "1KG": 500, "1/2KG": 260, "250GM": 130 },
-    image: "https://images.unsplash.com/photo-1589119908995-c6837e14841d?w=600&h=400&fit=crop&auto=format",
-    bgColor: "from-white to-yellow-50",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY6FSS-MrhSucAPWQtY57UxhRqaSQvJuuVDgdhRVVLqQ&s=10",
+    bgColor: "from-white to-orange-50",
     emoji: "⚪"
   }
 ];

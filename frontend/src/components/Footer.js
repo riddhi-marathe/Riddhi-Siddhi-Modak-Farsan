@@ -13,7 +13,7 @@ function Footer() {
               src="/assets/logo-image.jpeg" 
               alt="Riddhi Siddhi" 
               className="h-12 w-12 rounded-full object-cover border-2 shadow-md"
-              style={{ borderColor: '#D4A017' }}
+              style={{ borderColor: '#E9B94C' }}
             />
             <div>
               <h3>Riddhi Siddhi Modak Farsan</h3>

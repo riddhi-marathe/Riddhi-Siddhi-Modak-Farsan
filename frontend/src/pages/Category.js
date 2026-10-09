@@ -8,7 +8,7 @@ import './Category.css';
 const categoryMeta = {
   "Dry Snacks": { icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKNGn8Ok8eG8igVH8_Dd68xUAfHO2586zAiwLBUF7aug&s=10', color: '#FF9933', bgGradient: 'linear-gradient(135deg, #FFF5E6, #FFE8CC)', video: 'https://cdn.coverr.co/videos/coverr-making-sweets-5645/1080p.mp4' },
   "Namkeen": { icon: '🥟', color: '#E67300', bgGradient: 'linear-gradient(135deg, #FFF0E6, #FFE0CC)', video: 'https://cdn.coverr.co/videos/coverr-making-sweets-5645/1080p.mp4' },
-  "Sweets": { icon: '🍬', color: '#D4A017', bgGradient: 'linear-gradient(135deg, #FFF8E7, #FFEECC)', video: 'https://cdn.coverr.co/videos/coverr-making-sweets-5645/1080p.mp4' },
+  "Sweets": { icon: '🍬', color: '#E9B94C', bgGradient: 'linear-gradient(135deg, #FFF7DD, #FDEDB3)', video: 'https://cdn.coverr.co/videos/coverr-making-sweets-5645/1080p.mp4' },
   "Wet Sweets": { icon: '🍮', color: '#800020', bgGradient: 'linear-gradient(135deg, #FFF0F0, #FFE4E1)', video: 'https://cdn.coverr.co/videos/coverr-making-sweets-5645/1080p.mp4' }
 };
 
