@@ -166,10 +166,11 @@ def create_app():
     return app
 
 
+# Create the app instance so Gunicorn can find it
+app = create_app()
+
 if __name__ == '__main__':
-    app = create_app()
     print(f"🚀 {Config.SHOP_NAME} API is running!")
     print(f"📍 {Config.SHOP_ADDRESS}")
     print(f"📞 {Config.SHOP_PHONE}")
     app.run(debug=True, port=5000)
-
