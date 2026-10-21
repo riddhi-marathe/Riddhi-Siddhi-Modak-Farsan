@@ -156,6 +156,10 @@ def create_app():
     def health_check():
         return {'status': 'healthy', 'shop': Config.SHOP_NAME}
 
+    @app.route('/')
+    def home():
+        return "My backend is working perfectly!"
+
     # Seed products on first run
     with app.app_context():
         from models.products import Product
@@ -164,7 +168,6 @@ def create_app():
             print('✅ Database seeded with menu items!')
 
     return app
-
 
 # Create the app instance so Gunicorn can find it
 app = create_app()
