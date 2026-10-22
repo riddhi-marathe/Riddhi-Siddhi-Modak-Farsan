@@ -1,8 +1,12 @@
 import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).with_name('.env'))
 
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'riddhi-siddhi-secret-key-2024'
-    MONGO_URI = os.environ.get('MONGO_URI') or 'mongodb+srv://riddhimrt1813_db_user:xQsGvpHQGzNtO4M2@cluster0.as8akym.mongodb.net/?appName=Cluster0'
+    MONGO_URI = os.environ.get('MONGO_URI') or 'mongodb+srv://riddhidb_user:riddhi1813@cluster0.as8akym.mongodb.net/'
     MONGO_DB_NAME = os.environ.get('MONGO_DB_NAME') or 'riddhi_siddhi_farsan'
     JWT_EXPIRATION_HOURS = 24
     

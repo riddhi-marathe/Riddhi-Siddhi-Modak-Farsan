@@ -127,15 +127,19 @@ def create_app():
     CORS(app, resources={r"/api/*": {"origins": "*"}})
     JWTManager(app)
 
-    # MongoDB connection with local fallback for offline development
+    if not Config.MONGO_URI:
+        raise RuntimeError('MONGO_URI is missing. Set it in backend/.env before starting the API.')
+
     try:
-        client = MongoClient(Config.MONGO_URI, serverSelectionTimeoutMS=15000)
+        client = MongoClient(Config.MONGO_URI, serverSelectionTimeoutMS=5000)
         db = client.get_default_database(Config.MONGO_DB_NAME)
         db.command('ping')
         print('✅ Connected to MongoDB Atlas')
-    except Exception as exc:  # pragma: no cover - runtime fallback
-        print(f'⚠️ MongoDB unavailable ({exc}). Falling back to local in-memory database.')
-        db = LocalMongoDatabase()
+    except Exception as exc:  # pragma: no cover - depends on the configured MongoDB service
+        raise RuntimeError(
+            'Could not connect to MongoDB. Check the MONGO_URI cluster hostname, credentials, '
+            'and Atlas network access list.'
+        ) from exc
 
     app.db = db
 
